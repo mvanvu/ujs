@@ -295,7 +295,7 @@ export class Is {
                return Boolean(new URL(value));
 
             case 'image':
-               return Boolean(new URL(value)) && /\.(jpe?g|png|gif|svg|ico|bmp|webp|tiff)$/i.test(value);
+               return Boolean(new URL(value)) && /\.(jpe?g|png|gif|svg|ico|bmp|webp|tiff)(\?.*)?$/i.test(value);
 
             case 'base64':
                return /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(value);
